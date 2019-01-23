@@ -5,9 +5,10 @@ var sys = require('sys'),
     url = require('url');
 
 // ENTER YOUR CLIENT ID, CLIENT SECRET AND REDIRECT_URI
-var CLIENT_ID = '17cfeffb14a21238315c23501770003d1dd97a76';;
-var CLIENT_SECRET = 'c1ec91ecb596fe3dcf909e5ff8d725c070988b77';;
-var REDIRECT_URI = "http://publish.uwo.ca/~yding96/"; 
+var CLIENT_ID = '17cfeffb14a21238315c23501770003d1dd97a76';
+var CLIENT_SECRET = 'c1ec91ecb596fe3dcf909e5ff8d725c070988b77';
+// var REDIRECT_URI = "http://publish.uwo.ca/~yding96/"; 
+var REDIRECT_URI = "http://localhost:80/callback"; 
 
 
 function getAccessToken(params, successHandler) {
@@ -73,6 +74,7 @@ app.get('/callback', function (req, res) {
 	}, function (output) {
 
 		if (output !== undefined) {	
+			console.log(output);
 			res.send(output);
 		} else {
 			console.log("Output is undefined.");
@@ -84,6 +86,12 @@ app.get('/callback', function (req, res) {
 //Simple index that links to the login page.
 app.get('/', function(req, res){
     res.send('Bitly Authentication on node.js, please <a href="/login">login</a> to test.');
+});
+
+// Granted page
+app.get('/granted', function(req, res) {
+
+	res.send('You are authenticated!');
 });
 
 app.listen(80);
