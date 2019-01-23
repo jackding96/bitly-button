@@ -41,7 +41,10 @@ function getAccessToken(params, successHandler) {
 
 			if (successHandler !== undefined && result !== undefined) {
 				json = querystring.parse(result);
-				successHandler(json.login + ": " + json.access_token);
+				successHandler({
+					username: json.login,
+					access_token: json.access_token
+				});
 			}
 		});
 	});
@@ -74,8 +77,7 @@ app.get('/callback', function (req, res) {
 	}, function (output) {
 
 		if (output !== undefined) {	
-			console.log(output);
-			res.send(output);
+			res.send(output.access_token);
 		} else {
 			console.log("Output is undefined.");
 		}
