@@ -1,0 +1,27 @@
+{
+  "name": "bitly-button",
+  "version": "1.0.0",
+  "description": "Bitly Button:",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackding96/bitly-button.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackding96/bitly-button/issues"
+  },
+  "homepage": "https://github.com/jackding96/bitly-button#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "https": "^1.0.0",
+    "querystring": "^0.2.0",
+    "sys": "0.0.1",
+    "url": "^0.11.0"
+  }
+}
