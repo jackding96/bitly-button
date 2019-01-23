@@ -102,7 +102,8 @@ app.get('/create', function(req, res) {
 		json: true,
 	}
 	request(options).then(r => {
-		console.log('yee!');
+		console.log(res);
+		res.send(`Bitlink: ${r.link}`);
 	})
 	.catch(err => {console.log('naw')});
 });
