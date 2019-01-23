@@ -7,7 +7,7 @@ var sys = require('sys'),
 // ENTER YOUR CLIENT ID, CLIENT SECRET AND REDIRECT_URI
 var CLIENT_ID = '17cfeffb14a21238315c23501770003d1dd97a76';;
 var CLIENT_SECRET = 'c1ec91ecb596fe3dcf909e5ff8d725c070988b77';;
-var REDIRECT_URI = "https://.../callback"; 
+var REDIRECT_URI = "http://publish.uwo.ca/~yding96/"; 
 
 
 function getAccessToken(params, successHandler) {

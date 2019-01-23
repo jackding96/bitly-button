@@ -4,3 +4,4 @@ Currently, all Google Chrome extensions that use Bitly require multiple clicks i
 
 Steps:
 1. Register application with Bitly API
+2. Use OAuth to sign into bitly-button with bitly account
