@@ -8,3 +8,5 @@ Steps:
 3. Call the "Create Bitlink" API endpoint
 4. Create Chrome extension, get basic interactions working
 5. Integrate OAuth2.0 web flow into Chrome extension
+6. Integrate HTTP POST request to Bitly for creating new links
+7. Any remaining polish
