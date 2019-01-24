@@ -15,6 +15,7 @@ navigator.permissions.query({
 });
 
 chrome.browserAction.onClicked.addListener(function(tab) {
+  browser.browserAction.openPopup()
 
   // navigator.clipboard.writeText('Hello')
   // .then(() => {
