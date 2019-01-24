@@ -1,0 +1,10 @@
+#message-box {
+}
+#message-header {
+  margin: 0px;
+}
+#message-link {
+  margin: 0px;
+  font-weight: 700;
+  color: blue;
+}

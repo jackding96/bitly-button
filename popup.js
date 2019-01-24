@@ -2,22 +2,10 @@ let changeColor = document.getElementById('changeColor');
 
 let ACCESS_TOKEN = '830df54fea45d0d3adc6e25b53fae0bb6c595a7b';
 
-changeColor.onclick = function(element) {
+// changeColor.onclick = function(element) {
   chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
     var url = tabs[0].url;
     console.log(url);
-
-    // let options = {
-    //   url: 'https://api-ssl.bitly.com/v4/bitlinks',
-    //   method: 'POST',
-    //   headers: {
-    //     'Authorization': `Bearer ${ACCESS_TOKEN}`,
-    //   },
-    //   body: {
-    //     long_url: long_url
-    //   },
-    //   json: true,
-    // }
 
     fetch('https://api-ssl.bitly.com/v4/bitlinks', {
       method: 'POST',
@@ -30,6 +18,10 @@ changeColor.onclick = function(element) {
     .then(response => {
       navigator.clipboard.writeText(response.link)
       .then(() => {
+        document.getElementById('message-box').innerHTML = `
+          <p id='message-header'>Copied!</p>
+          <p id='message-link'>${response.link}</p>
+        `;
         console.log('Text copied to clipboard');
       })
       .catch(err => {
@@ -38,4 +30,4 @@ changeColor.onclick = function(element) {
     })
     .catch(error => console.error('NAW:', error));   
   });
-};
+// };
