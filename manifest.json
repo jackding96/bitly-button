@@ -2,5 +2,18 @@
   "name": "Bitly Button",
   "version": "1.0",
   "description": "A Button for Bitly!",
-  "manifest_version": 2
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+
+  },
+  "permissions": [
+    "tabs",
+    "clipboard",
+    "clipboardRead",
+    "clipboardWrite"
+ ]  
 }
