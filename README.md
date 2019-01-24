@@ -9,4 +9,8 @@ Steps:
 4. Create Chrome extension, get basic interactions working
 5. Integrate OAuth2.0 web flow into Chrome extension
 6. Integrate HTTP POST request to Bitly for creating new links
-7. Any remaining polish
+7. Error handling / messaging
+7. Any remaining polish (icons, styling, etc.)
+
+Potential Add-On Features:
+1. Custom URLs
