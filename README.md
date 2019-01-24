@@ -6,3 +6,4 @@ Steps:
 1. Register application with Bitly API
 2. Use OAuth to sign into bitly-button with bitly account
 3. Call the "Create Bitlink" API endpoint
+4. Create Chrome extension
