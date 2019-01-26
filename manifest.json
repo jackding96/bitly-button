@@ -16,6 +16,7 @@
     "clipboardRead",
     "clipboardWrite",
     "activeTab",
-    "https://bitly.com/oauth/authorize?*"
+    "https://bitly.com/oauth/authorize?*",
+    "identity"
  ]  
 }
