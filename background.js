@@ -19,7 +19,7 @@ chrome.identity.launchWebAuthFlow(
 
       // Set token to storage
       chrome.storage.sync.set({BITLY_ACCESS_TOKEN: response.access_token}, function() {
-        console.log("Access token set!");
+        console.log('Access token saved to local storage!')
       });
     })
     .catch(err => {
