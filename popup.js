@@ -27,7 +27,7 @@ chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
         console.error('Could not copy text: ', err);
       }); 
     })
-    .catch(error => console.error('NAW:', error));       
+    .catch(error => console.error('Error:', error));       
 
   });  
 });

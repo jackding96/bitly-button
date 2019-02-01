@@ -23,7 +23,7 @@ chrome.identity.launchWebAuthFlow(
       });
     })
     .catch(err => {
-      console.log('NAW', err);
+      console.log('Error:', err);
     });
    },
 );
