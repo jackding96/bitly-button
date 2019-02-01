@@ -17,28 +17,7 @@ var loc = "https://bitly.com/oauth/authorize?client_id=" + CLIENT_ID + "&redirec
 chrome.identity.launchWebAuthFlow(
   {'url': loc, 'interactive': true},
   function(redirect_url) {
-    console.log('YEE');
-    console.log(redirect_url);
     let code = redirect_url.split('=')[1];
-    console.log(code);
-
-    // let options = {
-    //   url: 'https://api-ssl.bitly.com/oauth/access_token',
-    //   method: 'POST',
-    //   qs: {
-    //     code: code,
-    //     redirect_uri: REDIRECT_URI,
-    //     client_id: CLIENT_ID,
-    //     client_secret: CLIENT_SECRET
-    //   }
-    // };
-    // request(options)
-    // .then(r => {
-    //   console.log(r);
-    // })
-    // .catch(err => {
-    //   console.log('NAW', err);
-    // });
 
     fetch(`https://api-ssl.bitly.com/oauth/access_token?code=${code}&redirect_uri=${REDIRECT_URI}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`, {
       method: 'POST',
