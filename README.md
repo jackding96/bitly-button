@@ -16,3 +16,4 @@ Steps:
 
 Potential Add-On Features:
 1. Custom URLs
+2. Do I need Typescript?
