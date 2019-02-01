@@ -43,9 +43,10 @@ chrome.identity.launchWebAuthFlow(
     fetch(`https://api-ssl.bitly.com/oauth/access_token?code=${code}&redirect_uri=${REDIRECT_URI}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`, {
       method: 'POST',
       headers:{
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
       }      
-    }).then(r => r)
+    }).then(r => r.json())
     .then(response => {
       console.log('YEE', response);
     })

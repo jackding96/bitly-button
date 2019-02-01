@@ -17,6 +17,7 @@
     "clipboardWrite",
     "activeTab",
     "https://bitly.com/oauth/authorize?*",
+    "https://api-ssl.bitly.com/oauth/access_token?*",
     "identity"
  ]  
 }
