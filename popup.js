@@ -2,11 +2,9 @@ let changeColor = document.getElementById('changeColor');
 
 chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
   var url = tabs[0].url;
-  console.log(url);
 
   chrome.storage.sync.get(['BITLY_ACCESS_TOKEN'], function(result) {
     const ACCESS_TOKEN = result.BITLY_ACCESS_TOKEN;
-    console.log(ACCESS_TOKEN);
 
     fetch('https://api-ssl.bitly.com/v4/bitlinks', {
       method: 'POST',
