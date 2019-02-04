@@ -17,3 +17,6 @@ Steps:
 Potential Add-On Features:
 1. Custom URLs
 2. Do I need Typescript?
+3. Do I need React?
+4. Do I need Babel?
+5. Create Chrome shortcut
