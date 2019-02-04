@@ -15,19 +15,37 @@ chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
       },
     }).then(res => res.json())
     .then(response => {
+      console.log(response);
       navigator.clipboard.writeText(response.link)
       .then(() => {
-        document.getElementById('message-box').innerHTML = `
-          <p id='message-header'>Copied!</p>
-          <p id='message-link'>${response.link}</p>
-        `;
-        console.log('Text copied to clipboard');
+        if (response.link) {
+          document.getElementById('message-box').innerHTML = `
+            <p id='message-header'>Copied!</p>
+            <p id='message-link'>${response.link}</p>
+          `;
+        }
+        else {
+          document.getElementById('message-box').innerHTML = `
+            <p id='message-header'>Error!</p>
+            <p id='message-err'>${response.description}</p>
+          `;          
+        }
       })
       .catch(err => {
-        console.error('Could not copy text: ', err);
+        document.getElementById('message-box').innerHTML = `
+          <p id='message-header'>Error:</p>
+          <p id='message-header'>${err}</p>
+        `;  
+        console.error('Could not copy text: ', err);      
       }); 
     })
-    .catch(error => console.error('Error:', error));       
+    .catch(error => {
+      document.getElementById('message-box').innerHTML = `
+        <p id='message-header'>Error:</p>
+        <p id='message-header'>${err}</p>
+      `; 
+      console.error('Error:', error);
+    });       
 
   });  
 });
